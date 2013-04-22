@@ -8,8 +8,7 @@ module MinecraftAvatars
 
     def initialize(player)
       self.player = player
-      self.message = "Player #{player} does not exist"
-      super()
+      super "Player #{player} does not exist"
     end
   end
 
@@ -18,8 +17,7 @@ module MinecraftAvatars
 
     def initialize(resolution)
       self.resolution = resolution
-      self.message = "Resolution #{resolution} is not valid!"
-      super()
+      super "Resolution #{resolution} is not valid!"
     end
   end
 
