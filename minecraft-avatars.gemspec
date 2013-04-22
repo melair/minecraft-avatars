@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["jacob.jervey@gmail.com"]
   spec.description   = %q{Ruby gem for retrieving Minecraft skins and returning them in a variety of sizes and formats}
   spec.summary       = %q{Minecraft skin API}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/jacobjervey/minecraft-avatars"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
