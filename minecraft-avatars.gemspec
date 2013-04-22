@@ -20,6 +20,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
-  spec.add_development_dependency "rmagick", "~> 2.13.2"
-  spec.add_development_dependency "chunky_png", "~> 1.2.8"
+  spec.add_dependency "chunky_png", "~> 1.2.8"
 end
