@@ -3,7 +3,9 @@ require "minecraft-avatars/flat_character"
 require "minecraft-avatars/face"
 
 module MinecraftAvatars
-  SKIN_URL = "http://s3.amazonaws.com/MinecraftSkins"
+  RESOLVE_UUID_URL = "https://api.mojang.com/users/profiles/minecraft"
+  TEXTURE_URL = "https://sessionserver.mojang.com/session/minecraft/profile"
+
   SKIN_SECTIONS = {
     :head_front => [8, 8, 8, 8],
     :head_accessory => [40, 8, 8, 8],

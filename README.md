@@ -29,7 +29,7 @@ image = MinecraftAvatars::Face.new(player_name, size = 64, accessories = true)
 # Extract the standard character avatar (front of the head, arms, legs, and torso) to a 32x64 image
 image = MinecraftAvatars::FlatCharacter.new(player_name, size = 64, accessories = true)
 ```
-Keep in mind that avatars are not lazy-loaded and perform an HTTP request every time the class is intialized.
+Keep in mind that avatars are not lazy-loaded and perform an HTTP request every time the class is intialized. Be warned that the texture API is heavily rate limited (currently once per second per player texture), if you require different sizes of avatars then call resize(size) on a Face or FlatCharacter object to save API calls.
 ```ruby
 # Get the raw blob (this is what youll likely be using)
 image.to_blob(constraints = {})
