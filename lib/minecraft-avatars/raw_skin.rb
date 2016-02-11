@@ -17,7 +17,7 @@ module MinecraftAvatars
     attr_accessor :texture_url
     attr_accessor :slim
 
-    def initialize(player_name, uuid => nil)
+    def initialize(player_name, uuid = nil)
       self.sections = {}
       self.player_name = player_name
 
