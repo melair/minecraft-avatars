@@ -10,7 +10,12 @@ module MinecraftAvatars
     def initialize(player_name, height=64, accessories=true)
       throw InvalidResolutionException unless (height & (height-1)) == 0
 
-      self.skin = RawSkin.new(player_name)
+      if player_name.length == 36
+        self.skin = RawSkin.new(nil, player_name)
+      else
+        self.skin = RawSkin.new(player_name)
+      end
+
       self.accessories = accessories
     end
 

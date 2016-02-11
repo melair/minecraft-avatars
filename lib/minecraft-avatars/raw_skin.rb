@@ -17,12 +17,16 @@ module MinecraftAvatars
     attr_accessor :texture_url
     attr_accessor :slim
 
-    def initialize(player_name)
+    def initialize(player_name, uuid => nil)
       self.sections = {}
       self.player_name = player_name
 
-      self.player_uuid = resolve_uuid player_name
-      
+      if uuid.nil?
+        self.player_uuid = resolve_uuid player_name
+      else
+        self.player_uuid = uuid
+      end
+
       self.texture_url, self.slim = resolve_texture self.player_uuid
       
       download_texture

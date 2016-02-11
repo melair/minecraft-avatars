@@ -9,7 +9,11 @@ module MinecraftAvatars
     def initialize(player_name, size=64)
       throw InvalidResolutionException unless (size & (size-1)) == 0
 
-      self.skin = RawSkin.new(player_name)
+      if player_name.length == 36
+        self.skin = RawSkin.new(nil, player_name)
+      else
+        self.skin = RawSkin.new(player_name)
+      end
 
       resize size
     end
