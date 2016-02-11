@@ -24,7 +24,7 @@ module MinecraftAvatars
       if uuid.nil?
         self.player_uuid = resolve_uuid player_name
       else
-        self.player_uuid = uuid
+        self.player_uuid = uuid.gsub("-", "")
       end
 
       self.texture_url, self.slim = resolve_texture self.player_uuid
